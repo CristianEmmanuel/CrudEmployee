@@ -26,17 +26,17 @@ namespace CrudEmployee.Models
         [Column(TypeName = "nvarchar(50)")]
         public string EmpEmail { get; set; }
 
-        [Column(TypeName = "nvarchar(100)")]
-        public string EmpPhoto { get; set; }
-        [NotMapped]
-        public IFormFile ImageFile { get; set; }
-        [NotMapped]
-        public string ImageSrc { get; set; }
+        //[Column(TypeName = "nvarchar(100)")]
+        //public string EmpPhoto { get; set; }
+        //[NotMapped]
+        //public IFormFile ImageFile { get; set; }
+        //[NotMapped]
+        //public string ImageSrc { get; set; }
 
-        public double EmpSalary { get; set; }
-        [DataType(DataType.Date)]
-        [Column(TypeName = "Date")]
-        public DateTime EmpBirthDate { get; set; }
+        //public double EmpSalary { get; set; }
+        //[DataType(DataType.Date)]
+        //[Column(TypeName = "Date")]
+        //public DateTime EmpBirthDate { get; set; }
         public int CountryId { get; set; }
         public Country Country { get; set; }
     }

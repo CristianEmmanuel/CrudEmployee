@@ -62,24 +62,6 @@ namespace CrudEmployee.Controllers
             }
         }
 
-        [HttpGet("{name:string}")]
-        public async Task<ActionResult<Employee>> GetEmployeeByName(string name)
-        {
-            try
-            {
-                var result = await employeeRepository.GetEmployeeByName(name);
-                if (result == null)
-                {
-                    return NotFound();
-                }
-                return result;
-
-            }
-            catch (Exception)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Error Retreiving data from the server");
-            }
-        }
 
         [HttpPost]
         public async Task<ActionResult<Employee>> CreateEmployee([FromForm] Employee employee)
