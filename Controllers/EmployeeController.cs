@@ -72,13 +72,6 @@ namespace CrudEmployee.Controllers
                 if (employee == null)
                     return BadRequest();
 
-                //if (employee.ImageFile != null)
-                //    employee.EmpPhoto = await SaveImage(employee.ImageFile);
-
-                //if (!((employee.EmpPhoto.ToUpper().EndsWith(".PNG")) || (employee.EmpPhoto.ToUpper().EndsWith(".JPG")) || (employee.EmpPhoto.ToUpper().EndsWith(".JPEG"))))
-                //    return BadRequest("Image Must be .png or .jpg/jpeg");
-
-
                 var newEmp = await employeeRepository.AddEmployee(employee);
                 return CreatedAtAction(nameof(GetEmployeeById), new { id = newEmp.EmpId }, newEmp);
 
