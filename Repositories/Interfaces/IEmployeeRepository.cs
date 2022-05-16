@@ -11,6 +11,7 @@ namespace CrudEmployee.Repositories.Interfaces
         Task<IEnumerable<Employee>> Search(string name);
         Task<IEnumerable<Employee>> GetEmployees();
         Task<Employee> GetEmployeeById(int id);
+        Task<Employee> GetEmployeeByName(string name);
         Task<Employee> AddEmployee(Employee employee);
         Task<Employee> UpdateEmployee(Employee employee);
         Task DeleteEmployee(int id);

@@ -42,6 +42,11 @@ namespace CrudEmployee.Repositories
             return await appDbContext.Employees.Include(e => e.Country).FirstOrDefaultAsync(e => e.EmpId == id);
         }
 
+        public async Task<Employee> GetEmployeeByName(string name)
+        {
+            return await appDbContext.Employees.Include(e => e.Country).FirstOrDefaultAsync(e => e.EmpName == name);
+        }
+
         public async Task<IEnumerable<Employee>> GetEmployees()
         {
             return await appDbContext.Employees.ToListAsync();
